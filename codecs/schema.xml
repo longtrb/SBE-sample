@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbe:messageSchema xmlns:sbe="http://fixprotocol.io/2016/sbe"
+                   xmlns:xi="http://www.w3.org/2001/XInclude"
+                   package="sbe"
+                   id="1"
+                   version="0"
+                   semanticVersion="5.2"
+                   description="Example base schema which can be extended."
+                   byteOrder="littleEndian">
+    <xi:include href="common-types.xml"/>
+    
+    <sbe:message name="InternalMsgSerialization" id="1" description="Description of a basic InternalMsgSerialization">
+        <field name="id" id="1" type="uint64"/>        
+        <field name="available" id="2" type="uint8"/>
+        <field name="type" id="3" type="uint32"/>
+		<field name="quantity" id="4" type="double"/>
+        <field name="price" id="5" type="double"/>
+        <data name="symbol" id="6" type="varAsciiEncoding"/>        
+        <data name="reqId" id="7" type="varAsciiEncoding"/>
+		<data name="custId" id="8" type="varAsciiEncoding"/>
+    </sbe:message>
+</sbe:messageSchema>
