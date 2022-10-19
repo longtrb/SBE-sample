@@ -13,6 +13,17 @@
 #include "InternalMsgSerialization.h"
 #include "InternalMsg.h"
 
+/// <summary>
+/// Benchmark result:
+/// 
+///		         Method |      Mean |     Error |    StdDev | Completed Work Items | Lock Contentions |  Gen 0 | Allocated |
+///    |--------------- |----------:|----------:|----------:|---------------------:|-----------------:|-------:|----------:|
+///    | benchSBEEncode |  60.44 ns |  0.152 ns |  0.142 ns |                    - |                - | 0.0497 |     104 B |
+///    | benchSBEDecode | 141.45 ns |  0.921 ns |  0.816 ns |                    - |                - | 0.1032 |     216 B |
+///    | benchNVSEncode | 586.11 ns | 11.462 ns | 10.160 ns |                    - |                - | 0.4129 |     864 B |
+///    | benchNVSDecode | 809.03 ns |  1.537 ns |  1.363 ns |                    - |                - | 0.7114 |   1,488 B |
+/// </summary>
+
 namespace sbe
 {
   class InternalMsgEnDecoder

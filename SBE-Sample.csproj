@@ -10,11 +10,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="sbecpp\sbe\InternalMsgEnDecoder.h" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Include="sbecpp\sbe\InternalMsgEnDecoder.h" />
+    <Compile Remove="sbe-cpp\**" />
+    <EmbeddedResource Remove="sbe-cpp\**" />
+    <None Remove="sbe-cpp\**" />
   </ItemGroup>
 
 	<ItemGroup>
