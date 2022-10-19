@@ -1,0 +1,1 @@
+java  -D"sbe.output.dir"="../sbe-cpp/" -D"sbe.target.language"=cpp -D"sbe.xinclude.aware"=true -cp sbe-all-1.27.0.jar uk.co.real_logic.sbe.SbeTool  ./schema.xml

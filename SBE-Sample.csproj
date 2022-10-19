@@ -9,6 +9,14 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="sbecpp\sbe\InternalMsgEnDecoder.h" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="sbecpp\sbe\InternalMsgEnDecoder.h" />
+  </ItemGroup>
+
 	<ItemGroup>
 		<PackageReference Include="BenchmarkDotNet" Version="0.13.1" />
 		<PackageReference Include="sbe-tool" Version="1.23.1.1" />

@@ -42,9 +42,10 @@ namespace SBE_Sample.sbe
 
 		public void decode(byte[] buffer, InternalMsg msg)
         {
-            DirectBuffer directBuffer = new(buffer);
 
-			DECODER.WrapForDecode(directBuffer, 0, InternalMsgSerialization.BlockLength, 0);
+			DECODE_BYTE_BUFFER.Wrap(buffer);
+
+			DECODER.WrapForDecode(DECODE_BYTE_BUFFER, 0, InternalMsgSerialization.BlockLength, 0);
 
 			msg.id = DECODER.Id;
 			msg.available = DECODER.Available == 1? true: false;
@@ -60,7 +61,6 @@ namespace SBE_Sample.sbe
 		public InternalMsg decode(byte[] buffer)
 		{
 			InternalMsg msg = new InternalMsg();
-			//DirectBuffer directBuffer = new(buffer);
 			DECODE_BYTE_BUFFER.Wrap(buffer);
 
 			DECODER.WrapForDecode(DECODE_BYTE_BUFFER, 0, InternalMsgSerialization.BlockLength, 0);
